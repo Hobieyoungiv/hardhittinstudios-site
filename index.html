@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hard Hittin Studios - Hobie Young</title>
+<link rel="icon" type="image/png" href="assets/hhs_badge_64.png">
+<meta name="description" content="I build games, Discord bots, websites, AI agent tools and 3D prints, and I fix broken game projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#050505;--panel:#0f0f10;--line:#222;--text:#f2f2f2;--dim:#9a9a9a;--red:#e10600;--red2:#ff2a2a;--deep:#5a0000}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font:16px/1.6 Inter,system-ui,sans-serif;overflow-x:hidden}
+a{color:inherit}
+h1,h2,h3{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;letter-spacing:1px;line-height:.95}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+
+nav{position:absolute;top:0;left:0;right:0;z-index:5}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:20px;padding-bottom:20px}
+.logo{font:400 28px "Bebas Neue",sans-serif;letter-spacing:2px;display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo img{width:52px;height:52px}
+.logo b{color:var(--red);font-weight:400}
+nav .links a{font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#ddd;text-decoration:none;margin-left:24px}
+nav .links a:hover{color:var(--red2)}
+
+/* hero: no game footage, a moving red grid */
+.hero{position:relative;min-height:min(90vh,820px);display:flex;align-items:center;overflow:hidden;clip-path:polygon(0 0,100% 0,100% 90%,0 100%);
+ background:radial-gradient(ellipse at 75% 40%,rgba(225,6,0,.38),rgba(5,5,5,0) 55%),radial-gradient(ellipse at 10% 90%,rgba(90,0,0,.5),rgba(5,5,5,0) 50%),#050505}
+.hero::before{content:"";position:absolute;inset:-60px;background-image:linear-gradient(rgba(255,40,40,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(255,40,40,.09) 1px,transparent 1px);
+ background-size:60px 60px;transform:perspective(600px) rotateX(55deg) translateY(120px);transform-origin:center 80%;animation:grid 6s linear infinite}
+@keyframes grid{to{background-position:0 60px}}
+.hero .wrap{position:relative;z-index:2;padding-top:120px;padding-bottom:140px;width:100%;display:grid;grid-template-columns:1.25fr .75fr;gap:30px;align-items:center}
+.hero .mark{width:100%;max-width:400px;justify-self:end;filter:drop-shadow(0 0 40px rgba(225,6,0,.45));animation:pulse 4s ease-in-out infinite}
+@keyframes pulse{50%{filter:drop-shadow(0 0 70px rgba(225,6,0,.7))}}
+.tag{display:inline-block;background:var(--red);color:#fff;font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;padding:6px 12px;margin-bottom:18px}
+.hero h1{font-size:clamp(60px,10vw,140px)}
+.hero h1 span{color:var(--red)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 26px}
+.chips span{border:1px solid #3a0a0a;background:rgba(20,0,0,.6);padding:7px 14px;font-weight:600;font-size:14px;letter-spacing:1px}
+.hero p{max-width:560px;color:#cfcfcf;font-size:18px;margin-bottom:30px}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:15px 28px;font-weight:700;font-size:14px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%)}
+.btn.red{background:var(--red);color:#fff}
+.btn.red:hover{background:var(--red2)}
+.btn.out{background:#fff;color:#000}
+
+section{padding:80px 0}
+.head{display:flex;align-items:baseline;gap:18px;margin-bottom:12px}
+.head .num{font:400 30px "Bebas Neue",sans-serif;color:var(--red)}
+.head h2{font-size:clamp(44px,6vw,72px)}
+.lead{color:var(--dim);max-width:660px;margin-bottom:34px}
+
+/* what I build */
+.build{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.bcard{position:relative;background:var(--panel);border:1px solid var(--line);padding:26px 22px 24px;transition:border-color .15s,transform .15s}
+.bcard:hover{border-color:var(--red);transform:translateY(-3px)}
+.bcard svg{width:38px;height:38px;stroke:var(--red2);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;margin-bottom:14px}
+.bcard h3{font-size:32px}
+.bcard p{color:var(--dim);font-size:14px;margin-top:6px}
+.bcard .soon{position:absolute;top:16px;right:16px;font-size:11px;font-weight:700;letter-spacing:2px;color:var(--red2);border:1px solid var(--red);padding:3px 8px}
+
+/* projects */
+.proj{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.pcard{background:linear-gradient(160deg,#160000,#0b0b0b 65%);border-left:3px solid var(--red);padding:24px 24px 22px}
+.pcard .kind{font-size:12px;letter-spacing:3px;font-weight:700;color:var(--red2)}
+.pcard h3{font-size:36px;margin:6px 0 8px}
+.pcard p{color:#c4c4c4;font-size:15px}
+.pcard ul{list-style:none;margin-top:12px;display:flex;flex-wrap:wrap;gap:8px}
+.pcard li a,.pcard li span{display:inline-block;font-size:13px;padding:5px 10px;border:1px solid #3a0a0a;text-decoration:none}
+.pcard li a:hover{border-color:var(--red)}
+
+.strip{background:var(--red);clip-path:polygon(0 18%,100% 0,100% 82%,0 100%);padding:46px 0}
+.strip .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.strip b{display:block;font:400 40px "Bebas Neue",sans-serif;color:#fff}
+.strip span{color:#ffd9d9;font-size:14px}
+
+/* services: text cards, no game pictures */
+.svc{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.card{background:var(--panel);border-top:3px solid var(--red);text-decoration:none;display:flex;justify-content:space-between;gap:16px;align-items:flex-end;padding:24px 22px;transition:background .15s}
+.card:hover{background:#170303}
+.card h3{font-size:34px}
+.card p{color:var(--dim);font-size:14px;margin-top:4px}
+.price{flex:none;text-align:right;font:400 38px "Bebas Neue",sans-serif;color:var(--red2);line-height:1}
+.price small{display:block;font:600 11px Inter,sans-serif;letter-spacing:2px;color:var(--dim)}
+
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:st}
+.step{background:var(--panel);padding:22px 18px;border-left:3px solid var(--red)}
+.step::before{counter-increment:st;content:"0" counter(st);font:400 40px "Bebas Neue",sans-serif;color:var(--red);display:block;line-height:1;margin-bottom:8px}
+.step h3{font-size:26px}
+.step p{color:var(--dim);font-size:14px;margin-top:6px}
+
+.about{display:grid;grid-template-columns:1fr 1.3fr;gap:40px;align-items:start}
+.about .big{font:400 clamp(34px,4vw,52px) "Bebas Neue",sans-serif;line-height:1}
+.about .big span{color:var(--red)}
+.about p{color:#c9c9c9;margin-bottom:14px}
+details{border-bottom:1px solid var(--line);padding:16px 0}
+summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--red);font-weight:700;font-size:20px;line-height:1}
+details[open] summary::after{content:"-"}
+details p{color:var(--dim);margin-top:10px;max-width:760px}
+
+.shop{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;background:linear-gradient(90deg,var(--deep),#0a0a0a);padding:34px 30px;border-left:4px solid var(--red)}
+.shop h3{font-size:40px}
+.shop p{color:#d0b5b5}
+footer{border-top:1px solid var(--line);padding:30px 0 44px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--dim);font-size:13px;letter-spacing:1px}
+footer a{color:#ddd;text-decoration:none;margin-left:18px}
+footer a:hover{color:var(--red2)}
+
+@media (max-width:760px){
+ nav .links{display:none}
+ .hero .wrap{padding-bottom:100px;grid-template-columns:1fr}
+ .hero .mark{order:-1;justify-self:start;max-width:170px}
+ .build,.proj,.svc,.strip .wrap,.about{grid-template-columns:1fr}
+ .steps{grid-template-columns:1fr 1fr}
+ .strip{clip-path:polygon(0 5%,100% 0,100% 95%,0 100%)}
+ section{padding:60px 0}
+}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+ <a class="logo" href="#"><img src="assets/hhs_badge_256.png" alt="Hard Hittin Studios logo">HARD HITTIN<b>STUDIOS</b></a>
+ <div class="links"><a href="#build">What I Build</a><a href="#projects">Projects</a><a href="#services">Hire Me</a><a href="#shop">Shop</a></div>
+</div></nav>
+
+<header class="hero">
+ <div class="wrap">
+ <div class="htext">
+  <div class="tag">Hard Hittin Studios - powered by AI agents</div>
+  <h1>I build <span>things.</span><br>And fix them.</h1>
+  <div class="chips"><span>Games</span><span>Discord bots</span><span>Websites</span><span>AI agent tools</span><span>3D prints</span><span>Bug fixes</span></div>
+  <p>I run AI agents every day to build games, bots, tools and sites, and I check every result myself before it goes out.</p>
+  <div class="btns">
+   <a class="btn red" href="https://www.fiverr.com/hobieyoungiv" target="_blank" rel="noopener">Hire me on Fiverr</a>
+   <a class="btn out" href="#projects">See projects</a>
+  </div>
+  </div>
+ <img class="mark" src="assets/hhs_badge_512.png" alt="Hard Hittin Studios logo">
+</div>
+</header>
+
+<section id="build"><div class="wrap">
+ <div class="head"><span class="num">01</span><h2>What I Build</h2></div>
+ <p class="lead">Six kinds of work, one way of doing it: build fast with AI agents, then test it for real.</p>
+ <div class="build">
+  <div class="bcard"><svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="3"/><path d="M6 12h4M8 10v4"/><circle cx="15.5" cy="11" r="1"/><circle cx="17.5" cy="13" r="1"/></svg><h3>Games</h3><p>Unreal Engine 5 and Roblox: combat, abilities, effects, game systems.</p></div>
+  <div class="bcard"><svg viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="12" rx="3"/><path d="M12 3v4M9 12h.01M15 12h.01M9 16h6"/></svg><h3>AI Agent Tools</h3><p>Agents that build, test and report on their own: checkers, video recorders, daily research scans.</p></div>
+  <div class="bcard"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4z"/><path d="M8 10h8M8 13h5"/></svg><h3>Discord Bots</h3><p>Levels, tickets, giveaways, music, alerts, game-server links. Built as add-ons you switch on.</p></div>
+  <div class="bcard"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></svg><h3>Websites</h3><p>One-page sites and portfolios that work on phones, like this one.</p></div>
+  <div class="bcard"><span class="soon">DECEMBER</span><svg viewBox="0 0 24 24"><path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M12 22V12M21 7l-9 5-9-5"/></svg><h3>3D Prints</h3><p>Game models and custom pieces, printed. The printer arrives in December.</p></div>
+  <div class="bcard"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.5-.5-.5-2.5z"/></svg><h3>Bug Fixes</h3><p>Unreal crashes, packaging errors, engine upgrades. Found, fixed, explained.</p></div>
+ </div>
+</div></section>
+
+<section id="projects" style="padding-top:0"><div class="wrap">
+ <div class="head"><span class="num">02</span><h2>Projects</h2></div>
+ <p class="lead">Things that are live or in the works.</p>
+ <div class="proj">
+  <div class="pcard"><div class="kind">ROBLOX</div><h3>5 Published Games</h3><p>Dig, fish, climb, scrap and build a factory. Built and published on Roblox, free to play.</p>
+   <ul><li><a href="https://www.roblox.com/games/89000504272818" target="_blank" rel="noopener">Fossil Fusion: Dig</a></li><li><a href="https://www.roblox.com/games/82916722787397" target="_blank" rel="noopener">Fish</a></li><li><a href="https://www.roblox.com/games/85049717372284" target="_blank" rel="noopener">Climb Out</a></li><li><a href="https://www.roblox.com/games/134118394022293" target="_blank" rel="noopener">Scrap</a></li><li><a href="https://www.roblox.com/games/84456460495523" target="_blank" rel="noopener">Factory</a></li></ul></div>
+  <div class="pcard"><div class="kind">DISCORD</div><h3>Community Bot</h3><p>Running live on a community server: levels, tickets, giveaways, starboard, birthdays, music and a Roblox admin link. Each feature is an add-on you switch on.</p>
+   <ul><li><span>Pick your add-ons</span></li><li><a href="https://hobieyoung.gumroad.com" target="_blank" rel="noopener">Starter kit on Gumroad</a></li></ul></div>
+  <div class="pcard"><div class="kind">AI AGENTS</div><h3>Self-Checking Pipeline</h3><p>Agents that build the game, run the tests, record clips and check every frame for problems before I look at it. Plus a daily scan that watches YouTube for new tools and sums them up.</p></div>
+  <div class="pcard"><div class="kind">UNREAL ENGINE 5</div><h3>Unannounced MMO</h3><p>A multiplayer MMO in development: combat, abilities and effects. More when it's ready.</p></div>
+ </div>
+</div></section>
+
+<div class="strip"><div class="wrap">
+ <div><b>AI + me</b><span>Agents do the heavy lifting, I check every result</span></div>
+ <div><b>Every day</b><span>Building and shipping something new</span></div>
+ <div><b>Clear notes</b><span>You always get what was made or changed</span></div>
+</div></div>
+
+<section id="services"><div class="wrap">
+ <div class="head"><span class="num">03</span><h2>Hire Me</h2></div>
+ <p class="lead">Booked through Fiverr, so payment is protected for both of us.</p>
+ <div class="svc">
+  <a class="card" href="https://www.fiverr.com/hobieyoungiv" target="_blank" rel="noopener"><div><h3>UE5 Bug Fix</h3><p>Blueprint or C++ bug fixed in 2 days.</p></div><div class="price"><small>FROM</small>$5</div></a>
+  <a class="card" href="https://www.fiverr.com/hobieyoungiv" target="_blank" rel="noopener"><div><h3>Packaging Fix</h3><p>Packaging, cook or build error fixed, working build sent back.</p></div><div class="price"><small>FROM</small>$5</div></a>
+  <a class="card" href="https://www.fiverr.com/hobieyoungiv" target="_blank" rel="noopener"><div><h3>Engine Upgrade</h3><p>Move your project to a newer Unreal version without breaking it.</p></div><div class="price"><small>FROM</small>$25</div></a>
+  <a class="card" href="https://www.fiverr.com/hobieyoungiv" target="_blank" rel="noopener"><div><h3>Discord Server Setup</h3><p>Channels, roles and bots for your game or group in 1 day.</p></div><div class="price"><small>FROM</small>$25</div></a>
+ </div>
+</div></section>
+
+<section id="how" style="padding-top:0"><div class="wrap">
+ <div class="head"><span class="num">04</span><h2>How It Works</h2></div>
+ <div class="steps">
+  <div class="step"><h3>Message me</h3><p>Tell me what you need, or send the error or a short video of the problem.</p></div>
+  <div class="step"><h3>I check it</h3><p>I tell you if I can do it and what it costs before you pay.</p></div>
+  <div class="step"><h3>I build it</h3><p>Built fast with AI agents, then tested for real.</p></div>
+  <div class="step"><h3>You get notes</h3><p>A plain note on what I made or changed.</p></div>
+ </div>
+</div></section>
+
+<section id="about" style="padding-top:0"><div class="wrap">
+ <div class="about">
+  <div class="big">Hi, I'm <span>Hobie.</span><br>I build things.</div>
+  <div>
+   <p>I work with AI agents every day. They write, build and test; I decide what gets made and check that it really works. That's how I make games, Discord bots, websites and tools, and how I fix other people's projects.</p>
+   <p>From December I'm adding 3D prints. If you need something built or something is broken, send it over. I'll tell you straight if I can do it.</p>
+  </div>
+ </div>
+</div></section>
+
+<section id="faq" style="padding-top:0"><div class="wrap">
+ <div class="head"><span class="num">05</span><h2>Questions</h2></div>
+ <details><summary>What can you build for me?</summary><p>Game features (Unreal or Roblox), Discord bots and server setups, simple websites, and soon 3D prints. Message me with your idea.</p></details>
+ <details><summary>Do I pay before you look at it?</summary><p>No. Message me first. I tell you if I can do it and what it costs before you order.</p></details>
+ <details><summary>Do you use AI?</summary><p>Yes. AI agents do much of the building and testing. I plan the work, check every result and only send what works.</p></details>
+ <details><summary>How long does it take?</summary><p>Small fixes take 1-2 days. Bigger builds depend on the size; I tell you before you order.</p></details>
+ <details><summary>Which Unreal versions do you work with?</summary><p>Unreal Engine 5, up to 5.7. Older projects can be upgraded first.</p></details>
+</div></section>
+
+<section id="shop" style="padding-top:0"><div class="wrap">
+ <div class="shop">
+  <div><h3>The Shop</h3><p>Ready-made templates and bot kits.</p></div>
+  <a class="btn red" href="https://hobieyoung.gumroad.com" target="_blank" rel="noopener">Open Gumroad shop</a>
+ </div>
+</div></section>
+
+<footer><div class="wrap">
+ <span>HARD HITTIN STUDIOS - HOBIE YOUNG</span>
+ <span><a href="https://www.fiverr.com/hobieyoungiv" target="_blank" rel="noopener">FIVERR</a><a href="https://hobieyoung.gumroad.com" target="_blank" rel="noopener">GUMROAD</a></span>
+</div></footer>
+</body>
+</html>

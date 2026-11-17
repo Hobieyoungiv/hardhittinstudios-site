@@ -67,6 +67,12 @@ section{padding:80px 0}
 .bcard svg{width:38px;height:38px;stroke:var(--red2);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;margin-bottom:14px}
 .bcard h3{font-size:32px}
 .bcard p{color:var(--dim);font-size:14px;margin-top:6px}
+.bcard ul{list-style:none;margin-top:12px;display:grid;gap:6px}
+.bcard li{color:#c9c9c9;font-size:13.5px;padding-left:16px;position:relative}
+.bcard li::before{content:"";position:absolute;left:0;top:8px;width:7px;height:2px;background:var(--red)}
+details ul{margin:10px 0 0 18px;color:var(--dim);max-width:760px}
+details li{margin:4px 0}
+details li b{color:#ddd}
 .bcard .soon{position:absolute;top:16px;right:16px;font-size:11px;font-weight:700;letter-spacing:2px;color:var(--red2);border:1px solid var(--red);padding:3px 8px}
 
 /* projects */
@@ -153,14 +159,14 @@ footer a:hover{color:var(--red2)}
 
 <section id="build"><div class="wrap">
  <div class="head"><span class="num">01</span><h2>What I Build</h2></div>
- <p class="lead">Six kinds of work, one way of doing it: build fast with AI agents, then test it for real.</p>
+ <p class="lead">Six kinds of work, one way of doing it: build fast with AI agents, then test it for real. Not sure where your idea fits? Ask, the answer is usually yes.</p>
  <div class="build">
-  <div class="bcard"><svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="3"/><path d="M6 12h4M8 10v4"/><circle cx="15.5" cy="11" r="1"/><circle cx="17.5" cy="13" r="1"/></svg><h3>Games</h3><p>Unreal Engine 5 and Roblox: combat, abilities, effects, game systems.</p></div>
-  <div class="bcard"><svg viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="12" rx="3"/><path d="M12 3v4M9 12h.01M15 12h.01M9 16h6"/></svg><h3>AI Agent Tools</h3><p>Agents that build, test and report on their own: checkers, video recorders, daily research scans.</p></div>
-  <div class="bcard"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4z"/><path d="M8 10h8M8 13h5"/></svg><h3>Discord Bots</h3><p>Levels, tickets, giveaways, music, alerts, game-server links. Built as add-ons you switch on.</p></div>
-  <div class="bcard"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></svg><h3>Websites</h3><p>One-page sites and portfolios that work on phones, like this one.</p></div>
-  <div class="bcard"><span class="soon">DECEMBER</span><svg viewBox="0 0 24 24"><path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M12 22V12M21 7l-9 5-9-5"/></svg><h3>3D Prints</h3><p>Game models and custom pieces, printed. The printer arrives in December.</p></div>
-  <div class="bcard"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.5-.5-.5-2.5z"/></svg><h3>Bug Fixes</h3><p>Unreal crashes, packaging errors, engine upgrades. Found, fixed, explained.</p></div>
+  <div class="bcard"><svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="3"/><path d="M6 12h4M8 10v4"/><circle cx="15.5" cy="11" r="1"/><circle cx="17.5" cy="13" r="1"/></svg><h3>Games</h3><p>Unreal Engine 5 and Roblox, from one feature to a full game.</p><ul><li>Combat, abilities and spell effects</li><li>Game systems: loot, upgrades, shops, saving</li><li>Full Roblox games, built and published</li><li>Trailers and gameplay clips recorded in-game</li></ul></div>
+  <div class="bcard"><svg viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="12" rx="3"/><path d="M12 3v4M9 12h.01M15 12h.01M9 16h6"/></svg><h3>AI Agent Tools</h3><p>Agents that do the repeat work and report back in plain words.</p><ul><li>Build-and-test runs that check every result</li><li>Video recorders that check each frame for problems</li><li>Daily research scans with short summaries</li><li>Assistants that take requests on Discord and reply</li></ul></div>
+  <div class="bcard"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4z"/><path d="M8 10h8M8 13h5"/></svg><h3>Discord Bots</h3><p>Custom bots and full server setups. Pick only the features you want.</p><ul><li>Levels, ranks and rewards</li><li>Tickets, giveaways, starboard, birthdays</li><li>Music, alerts and auto roles</li><li>Links to your game (Roblox admin and more)</li></ul></div>
+  <div class="bcard"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></svg><h3>Websites</h3><p>Clean sites that work on phones, like this one, set up start to finish.</p><ul><li>Portfolios, business and landing pages</li><li>Logo and brand look to match</li><li>Your own domain, hosting and https set up</li><li>Link previews so it looks right when shared</li></ul></div>
+  <div class="bcard"><span class="soon">DECEMBER</span><svg viewBox="0 0 24 24"><path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M12 22V12M21 7l-9 5-9-5"/></svg><h3>3D Prints</h3><p>Printed pieces, modelled or taken from your game. Starting in December.</p><ul><li>Figures and models from games</li><li>Custom parts, holders and gifts</li><li>Your idea modelled, then printed</li></ul></div>
+  <div class="bcard"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.5-.5-.5-2.5z"/></svg><h3>Bug Fixes</h3><p>Broken projects found, fixed and explained.</p><ul><li>Unreal crashes and C++ / Blueprint bugs</li><li>Packaging and build errors</li><li>Engine upgrades without breaking things</li><li>Slow games made faster</li></ul></div>
  </div>
 </div></section>
 
@@ -216,7 +222,10 @@ footer a:hover{color:var(--red2)}
 
 <section id="faq" style="padding-top:0"><div class="wrap">
  <div class="head"><span class="num">05</span><h2>Questions</h2></div>
- <details><summary>What can you build for me?</summary><p>Game features (Unreal or Roblox), Discord bots and server setups, simple websites, and soon 3D prints. Message me with your idea.</p></details>
+ <details><summary>What can you build for me?</summary><p>Most things that live on a screen, and soon things you can hold:</p><ul><li><b>Games:</b> a single feature (combat, a shop, a save system) up to a full Roblox game, in Unreal Engine 5 or Roblox.</li><li><b>Fixes:</b> crashes, build and packaging errors, engine upgrades, slow games.</li><li><b>Discord:</b> a custom bot, or a whole server set up with channels, roles and bots.</li><li><b>AI tools:</b> agents that test, record, check or research for you and report back.</li><li><b>Websites:</b> a phone-friendly site with your logo, domain and hosting set up.</li><li><b>Branding and clips:</b> logos, banners, gameplay clips and trailers.</li><li><b>3D prints</b> (from December): models, figures and custom parts.</li></ul><p>If it is not on this list, ask anyway.</p></details>
+ <details><summary>Can you work on my existing project?</summary><p>Yes. Send the project or the error and I will look at what is there first, fix or add what you need, and keep the rest the way you had it.</p></details>
+ <details><summary>Can you do a whole project, not just a fix?</summary><p>Yes. Bigger builds are split into small steps, and you see each step working before the next one starts.</p></details>
+ <details><summary>What do I get at the end?</summary><p>The finished files or a working build, and a short plain note on what was made or changed and how to use it.</p></details>
  <details><summary>Do I pay before you look at it?</summary><p>No. Message me first. I tell you if I can do it and what it costs before you order.</p></details>
  <details><summary>Do you use AI?</summary><p>Yes. AI agents do much of the building and testing. I plan the work, check every result and only send what works.</p></details>
  <details><summary>How long does it take?</summary><p>Small fixes take 1-2 days. Bigger builds depend on the size; I tell you before you order.</p></details>

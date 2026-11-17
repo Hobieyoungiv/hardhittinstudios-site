@@ -142,12 +142,22 @@ footer a:hover{color:var(--red2)}
  .strip{clip-path:polygon(0 5%,100% 0,100% 95%,0 100%)}
  section{padding:60px 0}
 }
+nav .links a.on{color:var(--red2)}
+.phead{padding:150px 0 10px}
+.phead h1{font-size:72px;line-height:1}
+.phead p{color:var(--dim);margin-top:10px;max-width:640px}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px}
+.tiles a{display:block;background:var(--panel);border:1px solid var(--line);padding:18px;text-decoration:none;color:#fff;font-family:"Bebas Neue",Impact,sans-serif;font-size:26px;letter-spacing:1px}
+.tiles a span{display:block;font-family:Inter,sans-serif;font-size:13px;color:var(--dim);letter-spacing:0;margin-top:4px}
+.tiles a:hover{border-color:var(--red)}
+.nextp{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+@media (max-width:760px){nav .links{display:flex!important;flex-wrap:wrap;gap:4px 14px;justify-content:flex-end}nav .links a{margin-left:0;font-size:11px;letter-spacing:1px}.tiles{grid-template-columns:1fr 1fr}.phead{padding-top:170px}.phead h1{font-size:52px}}
 </style>
 </head>
 <body>
 <nav><div class="wrap">
- <a class="logo" href="#"><img src="assets/hhs_badge_256.png" alt="Hard Hittin Studios logo">HARD HITTIN<b>STUDIOS</b></a>
- <div class="links"><a href="#build">What I Build</a><a href="#projects">Projects</a><a href="#work">Work</a><a href="#services">Hire Me</a><a href="#shop">Shop</a></div>
+ <a class="logo" href="index.html"><img src="assets/hhs_badge_256.png" alt="Hard Hittin Studios logo">HARD HITTIN<b>STUDIOS</b></a>
+ <div class="links"><a href="index.html" class="on">Home</a><a href="services.html">Services</a><a href="work.html">Work</a><a href="about.html">About + FAQ</a><a href="https://hobieyoung.gumroad.com" target="_blank" rel="noopener">Shop</a></div>
 </div></nav>
 
 <header class="hero">
@@ -159,50 +169,14 @@ footer a:hover{color:var(--red2)}
   <p>I run AI agents every day to build games, bots, tools and sites, and I check every result myself before it goes out.</p>
   <div class="btns">
    <a class="btn red" href="https://www.fiverr.com/hobieyoungiv" target="_blank" rel="noopener">Hire me on Fiverr</a>
-   <a class="btn out" href="#projects">See projects</a>
+   <a class="btn out" href="work.html">See my work</a>
   </div>
   </div>
  <img class="mark" src="assets/hhs_badge_512.png" alt="Hard Hittin Studios logo">
 </div>
 </header>
 
-<section id="build"><div class="wrap">
- <div class="head"><span class="num">01</span><h2>What I Build</h2></div>
- <p class="lead">Seven kinds of work, one way of doing it: build fast with AI agents, then test it for real. Not sure where your idea fits? Ask, the answer is usually yes.</p>
- <div class="build">
-  <div class="bcard"><svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="3"/><path d="M6 12h4M8 10v4"/><circle cx="15.5" cy="11" r="1"/><circle cx="17.5" cy="13" r="1"/></svg><h3>Games</h3><p>Unreal Engine 5 and Roblox, from one feature to a full game.</p><ul><li>Combat, abilities and spell effects</li><li>Game systems: loot, upgrades, shops, saving</li><li>Full Roblox games, built and published</li><li>Trailers and gameplay clips recorded in-game</li></ul></div>
-  <div class="bcard"><svg viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="12" rx="3"/><path d="M12 3v4M9 12h.01M15 12h.01M9 16h6"/></svg><h3>AI Agent Tools</h3><p>Agents that do the repeat work and report back in plain words.</p><ul><li>Build-and-test runs that check every result</li><li>Video recorders that check each frame for problems</li><li>Daily research scans with short summaries</li><li>Assistants that take requests on Discord and reply</li></ul></div>
-  <div class="bcard"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4z"/><path d="M8 10h8M8 13h5"/></svg><h3>Discord Bots</h3><p>Custom bots and full server setups. Pick only the features you want.</p><ul><li>Levels, ranks and rewards</li><li>Tickets, giveaways, starboard, birthdays</li><li>Music, alerts and auto roles</li><li>Links to your game (Roblox admin and more)</li></ul></div>
-  <div class="bcard"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></svg><h3>Websites</h3><p>Clean sites that work on phones, like this one, set up start to finish.</p><ul><li>Portfolios, business and landing pages</li><li>Logo and brand look to match</li><li>Your own domain, hosting and https set up</li><li>Link previews so it looks right when shared</li></ul></div>
-  <div class="bcard"><svg viewBox="0 0 24 24"><path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M12 22V12M21 7l-9 5-9-5"/></svg><h3>3D Prints</h3><p>Printed pieces, modelled or taken from your game.</p><ul><li>Figures and models from games</li><li>Custom parts, holders and gifts</li><li>Your idea modelled, then printed</li></ul></div>
-  <div class="bcard"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.5-.5-.5-2.5z"/></svg><h3>Bug Fixes</h3><p>Broken projects found, fixed and explained.</p><ul><li>Unreal crashes and C++ / Blueprint bugs</li><li>Packaging and build errors</li><li>Engine upgrades without breaking things</li><li>Slow games made faster</li></ul></div>
-  <div class="bcard wide"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4M7 12l3-3 2 2 4-4"/></svg><h3>PC Tune-Ups</h3><p>Gaming PC lagging, stuttering or running slow? I find what is holding it back and fix it.</p><ul><li>Low FPS, stutter and lag in games</li><li>Drivers, Windows and game settings set up right</li><li>RAM running at its full speed (XMP / DOCP)</li><li>Heat, background apps and slow start-up checked</li><li>Crashes and blue screens tracked down</li><li>A plain note of what was changed</li></ul></div>
- </div>
-</div></section>
-
-<section id="projects" style="padding-top:0"><div class="wrap">
- <div class="head"><span class="num">02</span><h2>Projects</h2></div>
- <p class="lead">Things that are live or in the works.</p>
- <div class="proj">
-  <div class="pcard"><div class="kind">ROBLOX</div><h3>5 Published Games</h3><p>Dig, fish, climb, scrap and build a factory. Built and published on Roblox, free to play.</p>
-   <ul><li><a href="https://www.roblox.com/games/89000504272818" target="_blank" rel="noopener">Fossil Fusion: Dig</a></li><li><a href="https://www.roblox.com/games/82916722787397" target="_blank" rel="noopener">Fish</a></li><li><a href="https://www.roblox.com/games/85049717372284" target="_blank" rel="noopener">Climb Out</a></li><li><a href="https://www.roblox.com/games/134118394022293" target="_blank" rel="noopener">Scrap</a></li><li><a href="https://www.roblox.com/games/84456460495523" target="_blank" rel="noopener">Factory</a></li></ul></div>
-  <div class="pcard"><div class="kind">DISCORD</div><h3>Community Bot</h3><p>Running live on a community server: levels, tickets, giveaways, starboard, birthdays, music and a Roblox admin link. Each feature is an add-on you switch on.</p>
-   <ul><li><span>Pick your add-ons</span></li><li><a href="https://hobieyoung.gumroad.com" target="_blank" rel="noopener">Starter kit on Gumroad</a></li></ul></div>
-  <div class="pcard"><div class="kind">AI AGENTS</div><h3>Self-Checking Pipeline</h3><p>Agents that build the game, run the tests, record clips and check every frame for problems before I look at it. Plus a daily scan that watches YouTube for new tools and sums them up.</p></div>
-  <div class="pcard"><div class="kind">UNREAL ENGINE 5</div><h3>Unannounced MMO</h3><p>A multiplayer MMO in development: combat, abilities and effects. More when it's ready.</p></div>
- </div>
-</div></section>
-
-<section id="work" style="padding-top:0"><div class="wrap">
- <div class="head"><span class="num">&#9632;</span><h2>Work</h2></div>
- <p class="lead">A few real examples, straight from the projects.</p>
- <div class="gal">
-  <figure><img src="assets/work/agent_check.png" alt="AI agent checking recorded frames" loading="lazy"><figcaption><b>AI agent: record it, check every frame</b>Agents record each new attack in-game, then check every frame (feet, effects, how much of the screen it covers) before anyone looks at it.</figcaption></figure>
-  <figure><img src="assets/work/bugfix.png" alt="Bug fix case: teleport strike" loading="lazy"><figcaption><b>Code fix: the teleport that went backwards</b>Found from the logs, not guessed: one cause, one fix, then re-tested frame by frame.</figcaption></figure>
-  <figure><img src="assets/work/roblox.png" alt="Five published Roblox games" loading="lazy"><figcaption><b>5 Roblox games, live</b>Built, tested and published: dig, fish, climb, scrap and factory games.</figcaption></figure>
-  <figure><img src="assets/work/discord_kit.png" alt="Discord Bot Starter Kit" loading="lazy"><figcaption><b>Discord Bot Starter Kit</b>17 ready-to-run commands, tested on a live server, sold on Gumroad.</figcaption></figure>
- </div>
-</div></section>
+<section><div class="wrap"><div class="head"><span class="num">01</span><h2>What I Do</h2></div><p class="lead">Pick one to see the details.</p><div class="tiles"><a href="services.html#build">Games<span>Unreal Engine 5 and Roblox</span></a><a href="services.html#build">Discord Bots<span>Bots and server setups</span></a><a href="services.html#build">Websites<span>Like this one</span></a><a href="services.html#build">AI Agent Tools<span>Agents that do the repeat work</span></a><a href="services.html#build">Bug Fixes<span>Crashes, builds, upgrades</span></a><a href="services.html#build">PC Tune-Ups<span>Lag, stutter, low FPS</span></a><a href="services.html#build">3D Prints<span>Models and custom parts</span></a><a href="services.html#build">Not sure?<span>Ask, the answer is usually yes</span></a></div></div></section>
 
 <div class="strip"><div class="wrap">
  <div><b>AI + me</b><span>Agents do the heavy lifting, I check every result</span></div>
@@ -210,47 +184,7 @@ footer a:hover{color:var(--red2)}
  <div><b>Clear notes</b><span>You always get what was made or changed</span></div>
 </div></div>
 
-<section id="services"><div class="wrap">
- <div class="head"><span class="num">03</span><h2>Hire Me</h2></div>
- <p class="lead">Booked through Fiverr, so payment is protected for both of us.</p>
- <div class="svc">
-  <a class="card" href="https://www.fiverr.com/hobieyoungiv" target="_blank" rel="noopener"><div><h3>UE5 Bug Fix</h3><p>Blueprint or C++ bug fixed in 2 days.</p></div><div class="price"><small>FROM</small>$5</div></a>
-  <a class="card" href="https://www.fiverr.com/hobieyoungiv" target="_blank" rel="noopener"><div><h3>Packaging Fix</h3><p>Packaging, cook or build error fixed, working build sent back.</p></div><div class="price"><small>FROM</small>$5</div></a>
-  <a class="card" href="https://www.fiverr.com/hobieyoungiv" target="_blank" rel="noopener"><div><h3>Engine Upgrade</h3><p>Move your project to a newer Unreal version without breaking it.</p></div><div class="price"><small>FROM</small>$25</div></a>
-  <a class="card" href="https://www.fiverr.com/hobieyoungiv" target="_blank" rel="noopener"><div><h3>Discord Server Setup</h3><p>Channels, roles and bots for your game or group in 1 day.</p></div><div class="price"><small>FROM</small>$25</div></a>
- </div>
-</div></section>
-
-<section id="how" style="padding-top:0"><div class="wrap">
- <div class="head"><span class="num">04</span><h2>How It Works</h2></div>
- <div class="steps">
-  <div class="step"><h3>Message me</h3><p>Tell me what you need, or send the error or a short video of the problem.</p></div>
-  <div class="step"><h3>I check it</h3><p>I tell you if I can do it and what it costs before you pay.</p></div>
-  <div class="step"><h3>I build it</h3><p>Built fast with AI agents, then tested for real.</p></div>
-  <div class="step"><h3>You get notes</h3><p>A plain note on what I made or changed.</p></div>
- </div>
-</div></section>
-
-<section id="about" style="padding-top:0"><div class="wrap">
- <div class="about">
-  <div class="big">Hi, I'm <span>Hobie.</span><br>I build things.</div>
-  <div>
-   <p>I work with AI agents every day. They write, build and test; I decide what gets made and check that it really works. That's how I make games, Discord bots, websites and tools, and how I fix other people's projects.</p>
-   <p>I also do 3D prints. If you need something built or something is broken, send it over. I'll tell you straight if I can do it.</p>
-  </div>
- </div>
-</div></section>
-
-<section id="faq" style="padding-top:0"><div class="wrap">
- <div class="head"><span class="num">05</span><h2>Questions</h2></div>
- <details><summary>What can you build for me?</summary><p>Most things that live on a screen, and things you can hold:</p><ul><li><b>Games:</b> a single feature (combat, a shop, a save system) up to a full Roblox game, in Unreal Engine 5 or Roblox.</li><li><b>Fixes:</b> crashes, build and packaging errors, engine upgrades, slow games.</li><li><b>PC tune-ups:</b> a gaming PC that lags, stutters or crashes, checked and fixed.</li><li><b>Discord:</b> a custom bot, or a whole server set up with channels, roles and bots.</li><li><b>AI tools:</b> agents that test, record, check or research for you and report back.</li><li><b>Websites:</b> a phone-friendly site with your logo, domain and hosting set up.</li><li><b>Branding and clips:</b> logos, banners, gameplay clips and trailers.</li><li><b>3D prints:</b> models, figures and custom parts.</li></ul><p>If it is not on this list, ask anyway.</p></details>
- <details><summary>Can you work on my existing project?</summary><p>Yes, most of my work is on projects that already exist. Here is how it goes:</p><ul><li><b>Send it over:</b> the project files, a link, or just the error message and a short video of what goes wrong.</li><li><b>I look first:</b> I go through what is already there so I understand how it is built before changing anything.</li><li><b>I change only what you asked for:</b> your names, layout and style stay the way you had them.</li><li><b>You get it back working:</b> with a note on every file or setting I touched, so nothing is a mystery.</li></ul><p>Works for Unreal Engine 5 and Roblox games, Discord servers and bots, and existing websites.</p></details>
- <details><summary>Can you do a whole project, not just a fix?</summary><p>Yes. A full Roblox game, a Discord bot with all the features your server needs, or a complete website with your own domain are all things I have built from nothing.</p><ul><li><b>We agree the plan:</b> what it should do, what it should look like, and what comes first.</li><li><b>It is built in steps:</b> each step is something you can see or try, not just a promise.</li><li><b>You check each step:</b> you see it working and say what to change before the next part starts.</li><li><b>It gets finished:</b> tested, set up and handed over ready to use.</li></ul><p>This way you are never waiting weeks to find out it is not what you wanted.</p></details>
- <details><summary>What do I get at the end?</summary><p>Everything you need to use it and keep it:</p><ul><li><b>The finished work:</b> project files, a working game build, a running bot or a live website, depending on the job.</li><li><b>A plain note:</b> what was made or changed, where it is, and how to use it, written so anyone can follow it.</li><li><b>Proof it works:</b> screenshots or a short video of it running, so you can see it before you even open it.</li><li><b>It is yours:</b> you own what you paid for.</li></ul><p>If something does not work the way we agreed, tell me and I fix it.</p></details>
- <details><summary>Do I pay before you look at it?</summary><p>No. Message me first with what you need. I look at it and tell you straight:</p><ul><li><b>If I can do it</b>, and if not, I say so instead of taking the job.</li><li><b>What it costs</b>, before you order anything.</li><li><b>How long it will take.</b></li></ul><p>When you are happy with that, you order through Fiverr, so your payment is protected until the work is delivered.</p></details>
- <details><summary>How long does it take?</summary><p>It depends on the size of the job. As a rough guide:</p><ul><li><b>Small fixes</b> (one bug, one error): usually 1-2 days.</li><li><b>Discord server setup</b>: usually 1 day.</li><li><b>A new feature or a bot</b>: a few days, depending on how much it does.</li><li><b>PC tune-ups</b>: usually the same day.</li><li><b>Websites</b>: a few days, including your domain and hosting.</li><li><b>Full games or big builds</b>: planned in steps, with a time for each step.</li></ul><p>You always get the time before you order, and updates while I work.</p></details>
- <details><summary>Which Unreal versions do you work with?</summary><p>Unreal Engine 5, up to 5.7, in both Blueprint and C++.</p><ul><li><b>Older project?</b> I can upgrade it to a newer version first and fix what breaks on the way.</li><li><b>Errors after an upgrade?</b> That is one of the most common jobs I get.</li><li><b>Packaging problems?</b> I get it building and send back a working build.</li></ul><p>For Roblox I work in Roblox Studio and publish the game for you if you want.</p></details>
-</div></section>
+<section style="padding-top:0"><div class="wrap"><div class="nextp"><a class="btn red" href="services.html">Services and prices</a><a class="btn out" href="work.html">See my work</a><a class="btn out" href="about.html">Questions</a></div></div></section>
 
 <section id="shop" style="padding-top:0"><div class="wrap">
  <div class="shop">

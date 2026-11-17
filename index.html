@@ -73,6 +73,12 @@ section{padding:80px 0}
 details ul{margin:10px 0 0 18px;color:var(--dim);max-width:760px}
 details li{margin:4px 0}
 details li b{color:#ddd}
+.gal{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.gal figure{margin:0;background:var(--panel);border:1px solid var(--line)}
+.gal img{display:block;width:100%;height:auto}
+.gal figcaption{padding:14px 16px 16px;color:var(--dim);font-size:14px}
+.gal figcaption b{display:block;color:#fff;font-size:15px;margin-bottom:4px}
+@media (max-width:760px){.gal{grid-template-columns:1fr}}
 .bcard .soon{position:absolute;top:16px;right:16px;font-size:11px;font-weight:700;letter-spacing:2px;color:var(--red2);border:1px solid var(--red);padding:3px 8px}
 
 /* projects */
@@ -138,7 +144,7 @@ footer a:hover{color:var(--red2)}
 <body>
 <nav><div class="wrap">
  <a class="logo" href="#"><img src="assets/hhs_badge_256.png" alt="Hard Hittin Studios logo">HARD HITTIN<b>STUDIOS</b></a>
- <div class="links"><a href="#build">What I Build</a><a href="#projects">Projects</a><a href="#services">Hire Me</a><a href="#shop">Shop</a></div>
+ <div class="links"><a href="#build">What I Build</a><a href="#projects">Projects</a><a href="#work">Work</a><a href="#services">Hire Me</a><a href="#shop">Shop</a></div>
 </div></nav>
 
 <header class="hero">
@@ -180,6 +186,17 @@ footer a:hover{color:var(--red2)}
    <ul><li><span>Pick your add-ons</span></li><li><a href="https://hobieyoung.gumroad.com" target="_blank" rel="noopener">Starter kit on Gumroad</a></li></ul></div>
   <div class="pcard"><div class="kind">AI AGENTS</div><h3>Self-Checking Pipeline</h3><p>Agents that build the game, run the tests, record clips and check every frame for problems before I look at it. Plus a daily scan that watches YouTube for new tools and sums them up.</p></div>
   <div class="pcard"><div class="kind">UNREAL ENGINE 5</div><h3>Unannounced MMO</h3><p>A multiplayer MMO in development: combat, abilities and effects. More when it's ready.</p></div>
+ </div>
+</div></section>
+
+<section id="work" style="padding-top:0"><div class="wrap">
+ <div class="head"><span class="num">&#9632;</span><h2>Work</h2></div>
+ <p class="lead">A few real examples, straight from the projects.</p>
+ <div class="gal">
+  <figure><img src="assets/work/agent_check.png" alt="AI agent checking recorded frames" loading="lazy"><figcaption><b>AI agent: record it, check every frame</b>Agents record each new attack in-game, then check every frame (feet, effects, how much of the screen it covers) before anyone looks at it.</figcaption></figure>
+  <figure><img src="assets/work/bugfix.png" alt="Bug fix case: teleport strike" loading="lazy"><figcaption><b>Code fix: the teleport that went backwards</b>Found from the logs, not guessed: one cause, one fix, then re-tested frame by frame.</figcaption></figure>
+  <figure><img src="assets/work/roblox.png" alt="Five published Roblox games" loading="lazy"><figcaption><b>5 Roblox games, live</b>Built, tested and published: dig, fish, climb, scrap and factory games.</figcaption></figure>
+  <figure><img src="assets/work/discord_kit.png" alt="Discord Bot Starter Kit" loading="lazy"><figcaption><b>Discord Bot Starter Kit</b>17 ready-to-run commands, tested on a live server, sold on Gumroad.</figcaption></figure>
  </div>
 </div></section>
 
